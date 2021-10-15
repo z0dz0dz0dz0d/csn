@@ -1,0 +1,3 @@
+datasets/channels/*
+datasets/videos/*
+__pycache__

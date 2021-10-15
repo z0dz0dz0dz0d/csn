@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "SSH"
-          command: "ssh -oStrictHostKeyChecking=no -v $USER@$IP"
+          command: "ssh -oStrictHostKeyChecking=no -v $USER@$IP echo logged"
       - run:
           name: 'Deployment script'
           command: "\"./deploy.sh\""

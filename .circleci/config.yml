@@ -15,8 +15,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "ssh -oStrictHostKeyChecking=no -v $USER@$IP \"./deploy.sh\""
+          name: "SSH"
+          command: "ssh -oStrictHostKeyChecking=no -v $USER@$IP"
+      - run:
+          name: 'Deployment script'
+          command: "\"./deploy.sh\""
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
